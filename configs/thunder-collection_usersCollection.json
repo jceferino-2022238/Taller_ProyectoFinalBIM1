@@ -1,0 +1,54 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "usersCollection",
+    "dateExported": "2024-03-04T23:25:56.731Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9a3aeae2-5d42-41c6-950f-c9feb3f3fa1c",
+            "colId": "d964015b-0e7c-45e8-ab0b-1bc952020818",
+            "containerId": "",
+            "name": "userRegister",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T22:54:02.285Z",
+            "modified": "2024-03-04T23:23:51.955Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"adolfoperez\",\n  \"email\":\"apereZq8@gmail.com\",\n  \"password\":\"123456\",\n  \"role\":\"CLIENT_ROLE\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "f18331af-f05e-4f5f-a1aa-d89d90376fbe",
+            "colId": "d964015b-0e7c-45e8-ab0b-1bc952020818",
+            "containerId": "",
+            "name": "getUsers",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/users?from=0&limit=3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-04T22:54:51.108Z",
+            "modified": "2024-03-04T22:55:22.091Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "from",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}
