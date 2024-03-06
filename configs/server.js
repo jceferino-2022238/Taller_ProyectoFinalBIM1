@@ -9,6 +9,7 @@ import userRoutes from '../src/users/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import productRoutes from '../src/product/product.routes.js'
+import Product from '../src/product/product.model.js'
 class Server{
     constructor(){
         this.app = express();
@@ -24,6 +25,7 @@ class Server{
 
     async connectDB(){
         await dbConnection();
+        
     }
 
     middlewares(){

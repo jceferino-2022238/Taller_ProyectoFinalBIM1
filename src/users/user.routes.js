@@ -14,7 +14,6 @@ router.post(
         check("password", "Password isnt optional").not().isEmpty(),
         check("email", "This is not a valid Email").isEmail(),
         check("email").custom(exEmail),
-        check("role", '"You cant send the role field null, automatic register will give you client role (delete role field). If you want admin role send role field with this value: ADMIN_ROLE').not().isEmpty(),
         validateFields
     ], usersPost);
 

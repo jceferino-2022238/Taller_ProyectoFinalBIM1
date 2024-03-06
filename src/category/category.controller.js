@@ -49,8 +49,8 @@ export const categoryPut = async(req, res = response) =>{
 
 export const categoryDelete = async(req, res) =>{
     const { id } = req.params;
-    const category = await Category.findByIdAndUpdate(id, {state: false});
-
+    const category = await Category.findByIdAndDelete(id);
+    
     res.status(200).json({
         msg: 'Category eliminated: ',
         category
