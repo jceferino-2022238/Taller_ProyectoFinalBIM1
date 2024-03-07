@@ -9,7 +9,8 @@ import userRoutes from '../src/users/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import productRoutes from '../src/product/product.routes.js'
-import Product from '../src/product/product.model.js'
+import User from '../src/users/user.model.js'
+import bcryptjs from 'bcryptjs';
 class Server{
     constructor(){
         this.app = express();
@@ -25,7 +26,15 @@ class Server{
 
     async connectDB(){
         await dbConnection();
-        
+        const lUsers = await User.countDocuments();
+        if(lUsers > 0) return;
+        const salt = bcryptjs.genSaltSync();
+        const password = bcryptjs.hashSync('123456', salt)
+        const adminUser = new User(
+            {name: 'admin', email: 'admin@gmail.com', password, role: "ADMIN_ROLE"}
+        )
+
+        adminUser.save()
     }
 
     middlewares(){

@@ -2,6 +2,7 @@
 
 import Product from '../product/product.model.js'
 import Category from '../category/category.model.js'
+import { response } from 'express';
 
 export const postProduct = async (req, res) =>{
     const data = req.body;
@@ -60,8 +61,43 @@ export const getProducts = async(req, res) =>{
 export const getProductById = async (req, res) =>{
     const { id } = req.params;
     try {
-        
-    } catch (error) {
-        
+        const product = await Product.findById(id)
+
+        if(!product){
+            return res.status(404).json({ message: 'Product not found' });
+        }
+
+        const category = await Category.findById(product.category);
+
+        res.status(200).json({
+            product: {
+                ...product.toObject(),
+                category: category ? category.name : 'Category not found'
+            }
+        })
+    } catch (e) {
+        console.error(e);
+        res.status(500).json({ message: 'Internal Server Error'})
     }
+}
+
+export const putProduct = async (req, res  = response) =>{
+    const { id } = req.params;
+    const {_id, name, ...rest} = req.body;
+    const product = await Product.findOne({_id: id});
+    await Product.findByIdAndUpdate(id, rest);
+    res.status(200).json({
+        msg: "Product Updated",
+        product
+    })
+}
+
+export const productDelete = async (req, res) =>{
+    const { id } = req.params;
+    const product = await Product.findByIdAndDelete(id);
+
+    res.status(200).json({
+        msg: 'Product eliminated',
+        product
+    })
 }

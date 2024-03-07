@@ -1,0 +1,105 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "productCollection",
+    "dateExported": "2024-03-07T22:58:15.668Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6dfcf5ce-7fbc-45af-aff6-58db707b9039",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "newProduct",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-07T22:44:34.566Z",
+            "modified": "2024-03-07T22:53:52.230Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Choco Surprise\",\n  \"description\":\"Chocolate with strawberry jam\",\n  \"stock\":5,\n  \"price\":45.85,\n  \"category\":\"Chocolates\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "17610546-aa22-4554-b182-fdd9aa6c7828",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "viewCatalog",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products?from=0&limit=3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-07T22:45:03.031Z",
+            "modified": "2024-03-07T22:54:09.370Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "from",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "1a890114-6833-4c35-96e4-1c836e57a586",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "viewProductById",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/65ea4652d8e332c3197b85b4",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-07T22:45:13.380Z",
+            "modified": "2024-03-07T22:57:46.422Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "f0b7f3b3-241f-4c42-a1c2-810e8912d004",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "putProduct",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/65ea4652d8e332c3197b85b4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-07T22:45:19.771Z",
+            "modified": "2024-03-07T22:57:53.963Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"description\":\"Chocolate with coconut\",\n  \"stock\":10,\n  \"price\":88.45\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "7bfe69ac-d05a-46a9-906e-9d9816183a73",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "deleteProduct",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/65ea4652d8e332c3197b85b4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-07T22:45:27.076Z",
+            "modified": "2024-03-07T22:58:05.781Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

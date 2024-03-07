@@ -1,9 +1,35 @@
 import { Router } from 'express'
 import { check } from 'express-validator'
-import { exPName } from '../helpers/db-validators.js';
+import { exPName, exProductById } from '../helpers/db-validators.js';
 import { validateFields } from '../middlewares/validateFields.js';
-import { postProduct } from './product.controller.js';
+import { getProductById, getProducts, postProduct, productDelete, putProduct } from './product.controller.js';
 const router = Router();
+
+router.get('/', getProducts);
+
+router.get(
+    '/:id',
+    [
+        check("id", "Not valid ID").isMongoId(),
+        check("id").custom(exProductById),
+        validateFields
+    ], getProductById)
+
+router.put(
+    '/:id',
+    [
+        check("id", "Not valid ID").isMongoId(),
+        check("id").custom(exProductById),
+        validateFields
+    ], putProduct);
+
+router.delete(
+    '/:id',
+    [
+        check("id", "Not valid ID").isMongoId(),
+        check("id").custom(exProductById),
+        validateFields
+    ], productDelete);
 
 router.post(
     '/',
