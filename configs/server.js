@@ -9,6 +9,7 @@ import userRoutes from '../src/users/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import productRoutes from '../src/product/product.routes.js'
+import cartRoutes from '../src/cart/cart.routes.js'
 import User from '../src/users/user.model.js'
 import bcryptjs from 'bcryptjs';
 class Server{
@@ -19,6 +20,7 @@ class Server{
         this.authPath = '/taller_proyectof_bim1/v1/auth';
         this.categoryPath = '/taller_proyectof_bim1/v1/categories';
         this.productPath = '/taller_proyectof_bim1/v1/products'
+        this.cartPath = '/taller_proyectof_bim1/v1/carts'
         this.middlewares();
         this.connectDB();
         this.routes();
@@ -50,6 +52,7 @@ class Server{
         this.app.use(this.authPath, authRoutes)
         this.app.use(this.categoryPath, categoryRoutes)
         this.app.use(this.productPath, productRoutes)
+        this.app.use(this.cartPath, cartRoutes)
     }
 
     listen(){

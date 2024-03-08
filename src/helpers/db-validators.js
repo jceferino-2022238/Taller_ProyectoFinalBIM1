@@ -1,6 +1,7 @@
 import User from '../users/user.model.js';
 import Category from '../category/category.model.js';
 import Product from '../product/product.model.js';
+import Cart from '../cart/cart.model.js'
 export const exEmail = async (email = '') =>{
     const existsEmail = await User.findOne({email});
     if(existsEmail){
@@ -39,6 +40,13 @@ export const exCategoryById = async (id = '') =>{
 export const exProductById = async (id = '') =>{
     const existsProductById = await Product.findById(id);
     if(!existsProductById){
+        throw new Error(`Id ${id} doesnt exist`)
+    }
+}
+
+export const exCartById = async (id = '') =>{
+    const existsCartById = await Cart.findById(id);
+    if(!existsCartById){
         throw new Error(`Id ${id} doesnt exist`)
     }
 }
