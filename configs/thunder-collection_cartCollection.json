@@ -1,0 +1,93 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "cartCollection",
+    "dateExported": "2024-03-09T05:53:05.208Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "73155bff-d3a4-41ad-af85-4a39e01de024",
+            "colId": "3eb64df7-a569-4a7d-b109-f70f5d4eec07",
+            "containerId": "",
+            "name": "addToCart",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/carts/addToCart/65ebedbb2736e34c453e2931",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T01:55:31.993Z",
+            "modified": "2024-03-09T05:06:02.026Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWRiYjI3MzZlMzRjNDUzZTI5MmYiLCJpYXQiOjE3MDk5NjA2NTQsImV4cCI6MTcwOTk2NDI1NH0.I5Way9YZev5o2M0mvLhgVxmwgV3gqVo1KAxXGP9zZWw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"product\":\"test3\",\n  \"quantity\":1\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "d7666486-aefd-4cec-9790-bbfdb508074c",
+            "colId": "3eb64df7-a569-4a7d-b109-f70f5d4eec07",
+            "containerId": "",
+            "name": "getUserCart",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/carts/65ea70a49b22ae411da45deb",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T01:56:51.896Z",
+            "modified": "2024-03-09T05:43:53.006Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZTZmNGQ1ZjU4MjI3ZTZhZDFlYTkiLCJpYXQiOjE3MDk5NjMwMTgsImV4cCI6MTcwOTk2NjYxOH0.WoF2MUmvxEPFV0VTwYi2qTlpBOH9zY3UxqCK6CL9H2I"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "d6584d69-1ab1-43bc-9814-ea8f8fdf049e",
+            "colId": "3eb64df7-a569-4a7d-b109-f70f5d4eec07",
+            "containerId": "",
+            "name": "deleteFromCart",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/carts/deleteFromCart/65ea7815470b1bac43c4a0b2",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-08T06:06:31.084Z",
+            "modified": "2024-03-08T06:25:22.711Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhNzBhNDliMjJhZTQxMWRhNDVkZTkiLCJpYXQiOjE3MDk4NzgxODcsImV4cCI6MTcwOTg4MTc4N30.LWDfTxMIpLE144KbXDeqfUgUgtIqKdCs9Ab91lA-MSI"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b37d0a15-419e-4348-9aa3-be6909debdfd",
+            "colId": "3eb64df7-a569-4a7d-b109-f70f5d4eec07",
+            "containerId": "",
+            "name": "purchaseCart",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/carts/purchaseCart/65ebedbb2736e34c453e2931",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-08T07:53:22.149Z",
+            "modified": "2024-03-09T05:06:34.866Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWViZWRiYjI3MzZlMzRjNDUzZTI5MmYiLCJpYXQiOjE3MDk5NjA2NTQsImV4cCI6MTcwOTk2NDI1NH0.I5Way9YZev5o2M0mvLhgVxmwgV3gqVo1KAxXGP9zZWw"
+                }
+            ],
+            "params": [],
+            "reqType": "post",
+            "tests": []
+        }
+    ]
+}

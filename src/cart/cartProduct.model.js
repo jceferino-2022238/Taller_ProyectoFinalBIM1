@@ -16,6 +16,10 @@ const CartProductSchema = mongoose.Schema({
     user:{
         type: mongoose.Schema.Types.ObjectId,
         required: true
+    },
+    cart:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
     }
 })
 

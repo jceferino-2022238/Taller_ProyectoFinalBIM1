@@ -1,40 +1,45 @@
 {
     "client": "Thunder Client",
     "collectionName": "categoriesCollection",
-    "dateExported": "2024-03-05T20:23:15.732Z",
+    "dateExported": "2024-03-09T05:52:30.181Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "3b560868-c30a-4b7d-9650-4205ac0b89b1",
-            "colId": "4c2f843e-cbab-43b8-a04a-411d5d00fd65",
+            "_id": "4e0a67ff-b274-428c-bd11-c2c20cc8a47b",
+            "colId": "7d36ab37-8909-4d5f-b7a3-f3d992419f81",
             "containerId": "",
             "name": "newCategory",
             "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-05T20:10:08.445Z",
-            "modified": "2024-03-05T20:11:21.584Z",
-            "headers": [],
+            "created": "2024-03-07T22:44:04.353Z",
+            "modified": "2024-03-09T05:46:38.087Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Candies GT\",\n  \"description\":\"Candies from Guatemala\"\n}",
+                "raw": "{\n  \"name\":\"ChocolatesTest\",\n  \"description\":\"Chocolates from Guatemala\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "post",
             "tests": []
         },
         {
-            "_id": "90c8bdb8-81b6-4191-8fb4-71b02d666a8a",
-            "colId": "4c2f843e-cbab-43b8-a04a-411d5d00fd65",
+            "_id": "43e1b4e7-1adb-4161-acbb-88e4100220f5",
+            "colId": "7d36ab37-8909-4d5f-b7a3-f3d992419f81",
             "containerId": "",
             "name": "viewCategories",
-            "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories?from=0&limit=3",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories?from=0&limit=4",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-05T20:10:19.244Z",
-            "modified": "2024-03-05T20:11:40.327Z",
+            "created": "2024-03-07T22:44:04.354Z",
+            "modified": "2024-03-09T03:56:41.011Z",
             "headers": [],
             "params": [
                 {
@@ -44,7 +49,7 @@
                 },
                 {
                     "name": "limit",
-                    "value": "3",
+                    "value": "4",
                     "isPath": false
                 }
             ],
@@ -52,38 +57,48 @@
             "tests": []
         },
         {
-            "_id": "0673b257-3128-4aa9-84f7-fa0e490746f0",
-            "colId": "4c2f843e-cbab-43b8-a04a-411d5d00fd65",
+            "_id": "938f6eca-a350-4f2f-ab0d-a632ee8dd5df",
+            "colId": "7d36ab37-8909-4d5f-b7a3-f3d992419f81",
             "containerId": "",
             "name": "putCategory",
             "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories/65e77cfdf9d98f9b2481bcb5",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2024-03-05T20:10:29.428Z",
-            "modified": "2024-03-05T20:13:59.973Z",
-            "headers": [],
+            "created": "2024-03-07T22:44:04.355Z",
+            "modified": "2024-03-09T05:46:42.551Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"description\":\"Candies imported from Mexico\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "put",
             "tests": []
         },
         {
-            "_id": "22b6f698-03d7-462f-812c-a35c27dde458",
-            "colId": "4c2f843e-cbab-43b8-a04a-411d5d00fd65",
+            "_id": "4b9e681c-d171-4ac9-bfaf-de416d2fb6ee",
+            "colId": "7d36ab37-8909-4d5f-b7a3-f3d992419f81",
             "containerId": "",
             "name": "deleteCategory",
-            "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories/65e77cfdf9d98f9b2481bcb5",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/categories/65ebe7a46db9659287d011a0",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2024-03-05T20:10:36.828Z",
-            "modified": "2024-03-05T20:14:14.391Z",
-            "headers": [],
+            "created": "2024-03-07T22:44:04.356Z",
+            "modified": "2024-03-09T05:46:46.825Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
-            "reqType": "get",
+            "reqType": "del",
             "tests": []
         }
     ]

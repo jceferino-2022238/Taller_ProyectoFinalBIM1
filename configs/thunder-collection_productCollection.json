@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "productCollection",
-    "dateExported": "2024-03-07T22:58:15.668Z",
+    "dateExported": "2024-03-09T05:53:00.746Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,15 +14,20 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-07T22:44:34.566Z",
-            "modified": "2024-03-07T22:53:52.230Z",
-            "headers": [],
+            "modified": "2024-03-09T05:51:42.997Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Choco Surprise\",\n  \"description\":\"Chocolate with strawberry jam\",\n  \"stock\":5,\n  \"price\":45.85,\n  \"category\":\"Chocolates\"\n}",
+                "raw": "{\n  \"name\":\"test4\",\n  \"description\":\"Chocolate with strawberry jam\",\n  \"stock\":1,\n  \"price\":45.85,\n  \"category\":\"ChocolatesTest\"\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "post",
             "tests": []
         },
         {
@@ -30,11 +35,11 @@
             "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
             "containerId": "",
             "name": "viewCatalog",
-            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products?from=0&limit=3",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products?from=0&limit=10",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-07T22:45:03.031Z",
-            "modified": "2024-03-07T22:54:09.370Z",
+            "modified": "2024-03-09T04:24:34.333Z",
             "headers": [],
             "params": [
                 {
@@ -44,7 +49,7 @@
                 },
                 {
                     "name": "limit",
-                    "value": "3",
+                    "value": "10",
                     "isPath": false
                 }
             ],
@@ -60,8 +65,13 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-03-07T22:45:13.380Z",
-            "modified": "2024-03-07T22:57:46.422Z",
-            "headers": [],
+            "modified": "2024-03-09T05:51:49.869Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "reqType": "get",
             "tests": []
@@ -75,15 +85,20 @@
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-07T22:45:19.771Z",
-            "modified": "2024-03-07T22:57:53.963Z",
-            "headers": [],
+            "modified": "2024-03-09T05:51:55.657Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"description\":\"Chocolate with coconut\",\n  \"stock\":10,\n  \"price\":88.45\n}",
                 "form": []
             },
-            "reqType": "get",
+            "reqType": "put",
             "tests": []
         },
         {
@@ -91,12 +106,91 @@
             "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
             "containerId": "",
             "name": "deleteProduct",
-            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/65ea4652d8e332c3197b85b4",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/65ebd749bfd8b5423ca60e3f",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-03-07T22:45:27.076Z",
-            "modified": "2024-03-07T22:58:05.781Z",
+            "modified": "2024-03-09T05:52:00.947Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "82abf603-e7f2-4cca-90b6-a4af1bd84c92",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "getSoldOutProducts",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/soldOutProducts",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-09T02:54:49.707Z",
+            "modified": "2024-03-09T05:52:05.984Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "d78891cd-e27b-45f2-849a-1a0ab8c4a8c9",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "getMostSoldProducts",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/mostSoldProducts",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-09T03:07:06.293Z",
+            "modified": "2024-03-09T03:07:25.313Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2366b540-d55f-4450-bfe0-27f536c51329",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "getProductByName",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/getProductByName/chocolateE1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-03-09T03:13:45.767Z",
+            "modified": "2024-03-09T05:52:11.140Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b354b78e-f0bc-490e-a4e1-a5756bd1804a",
+            "colId": "9a81bc32-95b9-4c89-865e-ad101e5b6a9e",
+            "containerId": "",
+            "name": "getProductByCategory",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/products/getProductByCategory/ChocolatesTest",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-03-09T03:26:33.286Z",
+            "modified": "2024-03-09T05:52:15.525Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
             "params": [],
             "reqType": "get",
             "tests": []

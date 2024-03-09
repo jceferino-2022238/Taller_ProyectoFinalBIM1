@@ -1,0 +1,29 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "billCollection",
+    "dateExported": "2024-03-09T05:53:10.277Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e8f812f2-09f1-47c4-8f1c-ccded004e8b3",
+            "colId": "af3d9b8f-0310-4f3c-9bc7-e02f900b261d",
+            "containerId": "",
+            "name": "getUserBills",
+            "url": "http://localhost:8080/taller_proyectof_bim1/v1/bills/65ea70a49b22ae411da45de9",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-08T08:31:04.589Z",
+            "modified": "2024-03-09T05:34:58.305Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

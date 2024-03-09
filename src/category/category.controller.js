@@ -1,6 +1,6 @@
 import { response, request } from "express";
 import Category from './category.model.js';
-
+import Product from '../product/product.model.js'
 export const categoryGet = async (req=request, res = response) =>{
     const {limit, from} = req.query;
     const query = {state: true};
@@ -50,7 +50,9 @@ export const categoryPut = async(req, res = response) =>{
 export const categoryDelete = async(req, res) =>{
     const { id } = req.params;
     const category = await Category.findByIdAndDelete(id);
-    
+    const defaultCategory = await Category.findOne({name: 'defaultCategory'})
+    await Product.updateMany({category: id}, {category: defaultCategory._id});
+
     res.status(200).json({
         msg: 'Category eliminated: ',
         category

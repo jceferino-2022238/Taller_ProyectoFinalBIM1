@@ -10,7 +10,9 @@ import authRoutes from '../src/auth/auth.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
 import productRoutes from '../src/product/product.routes.js'
 import cartRoutes from '../src/cart/cart.routes.js'
+import billRoutes from '../src/bill/bill.routes.js'
 import User from '../src/users/user.model.js'
+import Category from '../src/category/category.model.js';
 import bcryptjs from 'bcryptjs';
 class Server{
     constructor(){
@@ -21,6 +23,7 @@ class Server{
         this.categoryPath = '/taller_proyectof_bim1/v1/categories';
         this.productPath = '/taller_proyectof_bim1/v1/products'
         this.cartPath = '/taller_proyectof_bim1/v1/carts'
+        this.billPath = '/taller_proyectof_bim1/v1/bills'
         this.middlewares();
         this.connectDB();
         this.routes();
@@ -37,6 +40,15 @@ class Server{
         )
 
         adminUser.save()
+
+        const defaultCategory = await Category.findOne({ name: 'defaultCategory' });
+
+        if(!defaultCategory){
+            const defaultCategory = new Category(
+                {name: 'defaultCategory', description: 'defaultCategory for products', products: []}
+                )
+            defaultCategory.save()
+        }
     }
 
     middlewares(){
@@ -53,6 +65,7 @@ class Server{
         this.app.use(this.categoryPath, categoryRoutes)
         this.app.use(this.productPath, productRoutes)
         this.app.use(this.cartPath, cartRoutes)
+        this.app.use(this.billPath, billRoutes)
     }
 
     listen(){
